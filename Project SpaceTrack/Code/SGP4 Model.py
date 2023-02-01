@@ -1,4 +1,5 @@
 import datetime
+import TLEs
 from orbit_predictor.sources import EtcTLESource
 # from orbit_predictor.locations import JUJA
 from orbit_predictor import locations
@@ -24,6 +25,4 @@ JUJA = locations.Location("JUJA", latitude_deg=-1.1018, longitude_deg=37.0144,
 # ----------------------------------------------------------------------------------
 next_pass = datetime.datetime.utcnow() + datetime.timedelta(days=17)
 print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=1519))
-# print(predictor.get_position(datetime.datetime(2019, 1, 1)))
-
-
+# print(predictor.get_position(datetime.datetime(2019, 1, 1))).
