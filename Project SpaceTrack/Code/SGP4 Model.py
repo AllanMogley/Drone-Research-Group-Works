@@ -19,22 +19,22 @@ predictor = get_predictor_from_tle_lines(TLEs.LS8)
 def satelitte():
     if predictor.sate_id == 39084:
         n = 16
-        print("\nLANDSAT 8")
+        print("LANDSAT 8")
         return n
 
     elif predictor.sate_id == 39634:
         n = 24
-        print("\nSENTINEL 1A")
+        print("SENTINEL 1A")
         return n
 
     elif predictor.sate_id == 41335:
         n = 24
-        print("\nSENTINEL 1B")
+        print("SENTINEL 1B")
         return n
 
     elif predictor.sate_id == 40697:
         n = 10
-        print("\nSENTINEL 2A")
+        print("SENTINEL 2A")
         return n
 
 
@@ -42,10 +42,10 @@ def satelitte():
 # Predict Next Pass
 # ----------------------------------------------------------------------------------
 x = range(0, (satelitte())*5, satelitte())
-print("\n\n")
+# print("\n\n")
 for i in x:
     next_pass = datetime.datetime(2022, 12, 10) + datetime.timedelta(days = i)
-    print("Day", i)
+    print("\nDay", i)
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
 
