@@ -6,23 +6,70 @@
 
 h1
 {
+  position : absolute ;
+  left : 42px;
+  top : 0px;
   font-family : JetBrains Mono NL;
   font-size : 20px;
   letter-spacing : 0.5px;
   color : #F2F2F2;
   color : rgb(242, 242, 242);
+
 }
 
 
-.navigation
+h2
+{
+  font-family : JetBrains Mono NL;
+  font-size : 15px;
+  letter-spacing : 1.35px;
+  color : #F2F2F2;
+  color : rgb(242, 242, 242);
+  justify-self: center;
+}
+
+
+
+.nav-bar
 {
   background : #000000;
   background : rgba(0, 0, 0, 1);
   position : absolute ;
-  left : 277px;
+  left : 0px;
   top : 0px;
-  width : 1366px;
+  width : 1363px;
   height : 110px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'nav-left nav-right';
+}
+
+.nav-left{
+  grid-area: nav-left;
+
+  position : absolute ;
+  left : 0px;
+  top : 0px;
+  width : 683px;
+  height : 110px;
+  align-items: center;
+}
+
+.nav-right{
+  grid-area: nav-right;
+
+  position : absolute ;
+  left : 100px;
+  top : 0px;
+  width : 500px;
+  height : 110px;
+  align-items: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
 }
 
 
@@ -33,7 +80,7 @@ h1
   position : absolute ;
   left : 280px;
   top : 0px;
-  width : fit-content;
+  width : 1363px;
   height : 110px;
 }
 .s2
@@ -96,3 +143,11 @@ h1
   width : 1363px;
   height : 129px;
 }
+
+
+/* @media screen and (max-width: 1920px) {
+  .navigation{
+    width: 100%;
+  }
+  
+} */
