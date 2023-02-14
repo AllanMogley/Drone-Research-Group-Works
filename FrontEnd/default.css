@@ -1,0 +1,89 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navigation
+{
+  background : #000000;
+  background : rgba(0, 0, 0, 1);
+  position : absolute ;
+  left : 277px;
+  top : 0px;
+  width : 1366px;
+  height : 110px;
+}
+
+
+.s1
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 0px;
+  width : 1363px;
+  height : 110px;
+}
+.s2
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 110px;
+  width : 1363px;
+  height : 210px;
+}
+.s3
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 321px;
+  width : 1363px;
+  height : 467px;
+}
+.s4
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 788px;
+  width : 1363px;
+  height : 185px;
+}
+.s5
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 973px;
+  width : 1363px;
+  height : 311px;
+}
+.s6
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 1284px;
+  width : 1363px;
+  height : 185px;
+}
+.s7
+{
+  background : #F2F2F2;
+  background : rgba(242, 242, 242, 1);
+  position : absolute ;
+  left : 280px;
+  top : 1469px;
+  width : 1363px;
+  height : 129px;
+}
