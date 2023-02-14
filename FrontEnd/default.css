@@ -1,19 +1,17 @@
-/* html, body{
+html, body{
     padding: 0;
     margin: 0;
-} */
+}
 
 
 h1
 {
-  position : absolute ;
-  left : 42px;
-  top : 0px;
   font-family : JetBrains Mono NL;
   font-size : 20px;
   letter-spacing : 0.5px;
   color : #F2F2F2;
   color : rgb(242, 242, 242);
+  justify-self: center;
 
 }
 
@@ -34,11 +32,9 @@ h2
 {
   background : #000000;
   background : rgba(0, 0, 0, 1);
-  position : absolute ;
-  left : 0px;
-  top : 0px;
-  width : 1363px;
+  max-width : 1366px;
   height : 110px;
+  margin: auto; 
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -47,27 +43,24 @@ h2
 }
 
 .nav-left{
+  display:grid;
   grid-area: nav-left;
 
-  position : absolute ;
-  left : 0px;
-  top : 0px;
-  width : 683px;
+  max-width : 683px;
   height : 110px;
+  text-align: center;
   align-items: center;
 }
 
 .nav-right{
+  display: grid;
   grid-area: nav-right;
+  margin: auto;
 
-  position : absolute ;
-  left : 100px;
-  top : 0px;
-  width : 500px;
-  height : 110px;
+  max-width: 500px;
+  height: 110px;
   align-items: center;
 
-  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
@@ -77,77 +70,85 @@ h2
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 0px;
-  width : 1363px;
+  max-width : 1363px;
   height : 110px;
 }
 .s2
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 110px;
-  width : 1363px;
+  max-width : 1363px;
   height : 210px;
 }
 .s3
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 321px;
-  width : 1363px;
+  max-width : 1363px;
   height : 467px;
 }
 .s4
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 788px;
-  width : 1363px;
+  max-width : 1363px;
   height : 185px;
 }
 .s5
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 973px;
-  width : 1363px;
+  max-width : 1363px;
   height : 311px;
 }
 .s6
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 1284px;
-  width : 1363px;
+  max-width : 1363px;
   height : 185px;
 }
 .s7
 {
   background : #F2F2F2;
   background : rgba(242, 242, 242, 1);
-  position : absolute ;
+  /* position : absolute ; */
   left : 280px;
   top : 1469px;
-  width : 1363px;
+  max-width : 1363px;
   height : 129px;
 }
 
 
-/* @media screen and (max-width: 1920px) {
-  .navigation{
-    width: 100%;
+ @media screen and (max-width: 1920px) {
+
+  .nav-bar{
+    width: 95%;
   }
+  .nav-left{
+    width: 95%;
+  }
+  .nav-right{
+    width: 95%;
+  }
+
   
-} */
+} 
