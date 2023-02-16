@@ -11,7 +11,6 @@ h1
   letter-spacing : 0.5px;
   color : #F2F2F2;
   color : rgb(242, 242, 242);
-  /* justify-self: center; */
   left: 2;
 
 }
@@ -55,7 +54,7 @@ h2
 }
 
 .nav-right{
-  display: grid;
+  display:grid;
   grid-area: nav-right;
   margin: auto;
 
@@ -67,6 +66,26 @@ h2
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
+}
+
+#profile{
+  height: 10px;
+  object-fit: contain;
+}
+
+.image{
+  margin: auto;
+  align-content: center;
+  max-width: 100vw;
+  
+}
+
+.profile{
+  max-width: 1669.1807.84;
+  height: 467px;
+  background-image: url(Images/pexels-pixabay-256152.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 
@@ -87,7 +106,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 110px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 210px;
 }
 .s3
@@ -97,7 +116,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 321px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 467px;
 }
 .s4
@@ -107,7 +126,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 788px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 185px;
 }
 .s5
@@ -117,7 +136,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 973px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 311px;
 }
 .s6
@@ -127,7 +146,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 1284px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 185px;
 }
 .s7
@@ -137,7 +156,7 @@ h2
   /* position : absolute ; */
   left : 280px;
   top : 1469px;
-  max-width : 1363px;
+  max-width : 100vw;
   height : 129px;
 }
 
@@ -151,6 +170,9 @@ h2
     width: 95%;
   }
   .nav-right{
+    width: 95%;
+  }
+  .image{
     width: 95%;
   }
 
