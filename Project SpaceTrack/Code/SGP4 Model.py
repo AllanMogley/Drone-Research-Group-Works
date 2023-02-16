@@ -14,7 +14,7 @@ JUJA = locations.Location("JUJA", latitude_deg=-1.1018, longitude_deg=37.0144,
 
 
 
-predictor = get_predictor_from_tle_lines(TLEs.LS8)
+predictor = get_predictor_from_tle_lines(TLEs.S2A)
 
 def satelitte():
     if predictor.sate_id == 39084:
@@ -38,13 +38,15 @@ def satelitte():
         return n
 
 
+sentinel2A = [2022, 12, 9]
+landsat8 = [2022, 12, 10]
 
 # Predict Next Pass
 # ----------------------------------------------------------------------------------
-x = range(0, (satelitte())*5, satelitte())
+x = range(0, (satelitte())*20, satelitte())
 # print("\n\n")
 for i in x:
-    next_pass = datetime.datetime(2022, 12, 10) + datetime.timedelta(days = i)
+    next_pass = datetime.datetime(2022, 12, 9) + datetime.timedelta(days = i)
     print("\nDay", i)
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
