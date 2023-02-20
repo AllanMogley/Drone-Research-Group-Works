@@ -38,15 +38,15 @@ def satelitte():
         return n
 
 
-sentinel2A = [2022, 12, 9]
-landsat8 = [2022, 12, 10]
+sentinel2A = datetime.datetime(2022, 12, 9)
+landsat8 = datetime.datetime(2022, 12, 10)
 
 # Predict Next Pass
 # ----------------------------------------------------------------------------------
 x = range(0, (satelitte())*20, satelitte())
 # print("\n\n")
 for i in x:
-    next_pass = datetime.datetime(2022, 12, 9) + datetime.timedelta(days = i)
+    next_pass = sentinel2A + datetime.timedelta(days = i)
     print("\nDay", i)
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
