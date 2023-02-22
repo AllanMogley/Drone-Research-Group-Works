@@ -51,4 +51,9 @@ for i in x:
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
 
+print("\n\n\n")
+T = datetime.datetime.now()
+print(T)
+
+
 # print(predictor.get_position(datetime.datetime(2022, 11, 24)))
