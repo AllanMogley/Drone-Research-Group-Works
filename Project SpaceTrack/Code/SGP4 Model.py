@@ -30,7 +30,7 @@ def satelitte2():
         n = 10
         return n
 
-landsat8 = datetime.datetime(2022, 2, 12)
+landsat8 = datetime.datetime(2023, 2, 12)
 sentinel2A = datetime.datetime(2023, 2, 17)
 # ----------------------------------------------------------------------------------
 
