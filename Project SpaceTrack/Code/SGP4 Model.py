@@ -54,6 +54,10 @@ for i in x:
 print("\n\n\n")
 T = datetime.datetime.now()
 print(T)
+print(next_pass)
+
+if next_pass == T:
+    print("Equal")
 
 
 # print(predictor.get_position(datetime.datetime(2022, 11, 24)))
