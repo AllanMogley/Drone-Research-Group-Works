@@ -20,16 +20,15 @@ predictor2 = get_predictor_from_tle_lines(TLEs.S2A)
 predictor = get_predictor_from_tle_lines(TLEs.LS8)
 def satelitte():
     if predictor.sate_id == 39084:
-        n = 16
         # print("LANDSAT 8")
+        n = 16
         return n
 
 def satelitte2():
     if predictor2.sate_id == 40697:
-        n = 10
         # print("SENTINEL 2A")
+        n = 10
         return n
-
 
 landsat8 = datetime.datetime(2022, 2, 12)
 sentinel2A = datetime.datetime(2023, 2, 17)
@@ -59,9 +58,9 @@ for i in x:
     next_pass = landsat8 + datetime.timedelta(days = i)
 
     if next_pass <= T2ls8:
-        print("Day", i)
+        print("Day", i, next_pass.strftime('%A'))
         print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
-print("\n\n")
+# print("\n\n")
 # ----------------------------------------------------------------------------------
 
 
@@ -69,7 +68,7 @@ print("\n\n")
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte())*5, satelitte2())
+x2 = range(0, (satelitte2())*5, satelitte2())
 print("\n\n")
 print("SENTINEL 2A")
 print("TODAYS DATE", T.date())
@@ -78,6 +77,6 @@ for j in x2:
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
 
     if next_pass2 <= T2s2A:
-        print("Day", j)
+        print("Day", j, next_pass2.strftime('%A'))
         print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
 # ----------------------------------------------------------------------------------
