@@ -1,6 +1,5 @@
 import datetime
 import TLEs
-from orbit_predictor.sources import EtcTLESource
 from orbit_predictor import locations
 from orbit_predictor.sources import get_predictor_from_tle_lines
 
@@ -43,7 +42,9 @@ landsat8 = datetime.datetime(2022, 12, 10)
 
 # Predict Next Pass
 # ----------------------------------------------------------------------------------
-T = datetime.datetime.now()
+T = datetime.datetime.today()
+print("TODAYS DATE", T)
+
 x = range(0, (satelitte())*5, satelitte())
 # print("\n\n")
 for i in x:
@@ -52,6 +53,7 @@ for i in x:
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 print("\n\n\n")
 # ----------------------------------------------------------------------------------
+
 
 
 # Update Predicted Passes at the end of loop
@@ -67,3 +69,6 @@ if next_pass != T:
 # ----------------------------------------------------------------------------------
 
 # print(predictor.get_position(datetime.datetime(2022, 11, 24)))
+
+# t1 = datetime
+# print(t1)
