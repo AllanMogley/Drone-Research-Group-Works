@@ -43,21 +43,27 @@ landsat8 = datetime.datetime(2022, 12, 10)
 
 # Predict Next Pass
 # ----------------------------------------------------------------------------------
+T = datetime.datetime.now()
 x = range(0, (satelitte())*5, satelitte())
 # print("\n\n")
 for i in x:
     next_pass = sentinel2A + datetime.timedelta(days = i)
     print("Day", i)
     print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
-
-
 print("\n\n\n")
-T = datetime.datetime.now()
-print(T)
-print(next_pass)
+# ----------------------------------------------------------------------------------
 
-if next_pass == T:
-    print("Equal")
 
+# Update Predicted Passes at the end of loop
+# ----------------------------------------------------------------------------------
+if next_pass != T:
+
+    for i in x:
+        next_pass2 = next_pass + datetime.timedelta(days = i)
+        print("Day", i)
+        print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
+        print(next_pass2)
+
+# ----------------------------------------------------------------------------------
 
 # print(predictor.get_position(datetime.datetime(2022, 11, 24)))
