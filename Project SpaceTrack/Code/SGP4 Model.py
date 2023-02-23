@@ -30,8 +30,8 @@ def satelitte2():
         n = 10
         return n
 
-landsat8 = datetime.datetime(2023, 2, 12)
-sentinel2A = datetime.datetime(2023, 2, 17)
+landsat8 = datetime.datetime(2023, 2, 28)
+sentinel2A = datetime.datetime(2023, 2, 27)
 # ----------------------------------------------------------------------------------
 
 
@@ -40,8 +40,8 @@ sentinel2A = datetime.datetime(2023, 2, 17)
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*4 )
-T2s2A = T + datetime.timedelta(days = satelitte2()*4 )
+T2ls8 = T + datetime.timedelta(days = satelitte()*5 )
+T2s2A = T + datetime.timedelta(days = satelitte2()*5 )
 # ----------------------------------------------------------------------------------
 
 
