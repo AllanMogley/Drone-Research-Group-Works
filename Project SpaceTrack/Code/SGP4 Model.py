@@ -60,7 +60,7 @@ for i in x:
     if next_pass <= T2ls8:
         print("Day", i, next_pass.strftime('%A'))
         print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
-# print("\n\n")
+    # next_pass = landsat8
 # ----------------------------------------------------------------------------------
 
 
