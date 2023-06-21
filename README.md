@@ -10,6 +10,5 @@ to predict a satellite's position based on the TLE(Two line element data)
 2. Install the libraries in the requirements.txt
 3. Open the SGP4.py file within the Project SpaceTrack folder and Run
 
-//You can add you satellite's TLE data in the TLE.py file
-//and change your locational info. within the SGP4 file
+You can add you satellite's TLE data in the TLE.py file and change your locational info. within the SGP4 file
 
