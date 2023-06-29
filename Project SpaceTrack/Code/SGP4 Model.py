@@ -41,8 +41,8 @@ sentinel2A = datetime.datetime(2023, 5, 28)
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*5 )
-T2s2A = T + datetime.timedelta(days = satelitte2()*5 )
+T2ls8 = T + datetime.timedelta(days = satelitte()*6 )
+T2s2A = T + datetime.timedelta(days = satelitte2()*6 )
 # ----------------------------------------------------------------------------------
 
 
@@ -50,7 +50,7 @@ T2s2A = T + datetime.timedelta(days = satelitte2()*5 )
 # ----------------------------------------------------------------------------------
 # Predict LANDSAT8 Next Pass
 # ----------------------------------------------------------------------------------
-x = range(0, (satelitte())*5, satelitte())
+x = range(0, (satelitte())*6, satelitte())
 print("\n\n")
 print("LANDSAT 8")
 print("TODAYS DATE", T.date())
@@ -72,7 +72,7 @@ for i in x:
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte2())*5, satelitte2())
+x2 = range(0, (satelitte2())*6, satelitte2())
 print("\n\n")
 print("SENTINEL 2A")
 print("TODAYS DATE", T.date())
