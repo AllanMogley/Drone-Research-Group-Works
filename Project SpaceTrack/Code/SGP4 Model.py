@@ -30,8 +30,9 @@ def satelitte2():
         n = 10
         return n
 
-landsat8 = datetime.datetime(2023, 2, 28)
-sentinel2A = datetime.datetime(2023, 2, 27)
+landsat8 = datetime.datetime(2023, 6, 4)
+
+sentinel2A = datetime.datetime(2023, 5, 28)
 # ----------------------------------------------------------------------------------
 
 
@@ -40,7 +41,7 @@ sentinel2A = datetime.datetime(2023, 2, 27)
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*1 )
+T2ls8 = T + datetime.timedelta(days = satelitte()*5 )
 T2s2A = T + datetime.timedelta(days = satelitte2()*5 )
 # ----------------------------------------------------------------------------------
 
@@ -55,15 +56,15 @@ print("LANDSAT 8")
 print("TODAYS DATE", T.date())
 print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 
-while True:
-    for i in x:
-        next_pass = landsat8 + datetime.timedelta(days = i)
+# while True:
+for i in x:
+    next_pass = landsat8 + datetime.timedelta(days = i)
 
-        if next_pass <= T2ls8:
-            print("Day", i, next_pass.strftime('%A'))
-            print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
+    if next_pass <= T2ls8:
+        print("Day", i, next_pass.strftime('%A'))
+        print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
-    landsat8 = next_pass
+# landsat8 = next_pass
 # ----------------------------------------------------------------------------------
 
 
