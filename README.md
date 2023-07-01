@@ -12,4 +12,4 @@ to predict a satellite's position based on the TLE(Two line element data)
 
 You can add you satellite's TLE data in the TLE.py file and change your locational info. within the SGP4 file
 
-# The Auto_update has an auto-update feature for the overpass dates but it's still work in progress
+### The Auto_update has an auto-update feature for the overpass dates but it's still work in progress
