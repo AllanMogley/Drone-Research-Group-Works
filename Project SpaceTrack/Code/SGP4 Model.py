@@ -52,7 +52,7 @@ print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 
 passes = []  #Create an empty list
 for i in x:
-    landsat8 = datetime.datetime(2023, 6, 4)
+    landsat8 = datetime.datetime(2023, 6, 20)
     next_pass = landsat8 + datetime.timedelta(days = i)
     passes.append(next_pass) # Stores the passes to the passes[] list
 
