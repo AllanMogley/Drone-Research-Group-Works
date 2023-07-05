@@ -7,7 +7,7 @@ from orbit_predictor.sources import get_predictor_from_tle_lines
 # ----------------------------------------------------------------------------------
 # My Location of interest
 # ----------------------------------------------------------------------------------
-JUJA = locations.Location("KALRO Mwea Kirogo farm", latitude_deg=-0.6507289449113348,
+JUJA = locations.Location("JUJA", latitude_deg=-0.6507289449113348,
                           longitude_deg=37.38098941349445, elevation_m=1150)
 # ----------------------------------------------------------------------------------
 
@@ -58,7 +58,7 @@ for i in x:
 
     if next_pass <= T2ls8:
         print("Day", i, next_pass.strftime('%A'))
-        print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
+        print(predictor.get_next_pass(KALRO Mwea Kirogo farm, next_pass, max_elevation_gt=30))
 
 
 print("\n\n")
@@ -89,7 +89,7 @@ for j in x2:
 
     if next_pass2 <= T2s2A:
         print("Day", j, next_pass2.strftime('%A'))
-        print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
+        print(predictor.get_next_pass(KALRO Mwea Kirogo farm, next_pass2, max_elevation_gt=30))
 
 
 print("\n\n")

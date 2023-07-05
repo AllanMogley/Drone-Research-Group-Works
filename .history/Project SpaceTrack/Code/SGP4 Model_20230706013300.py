@@ -7,7 +7,7 @@ from orbit_predictor.sources import get_predictor_from_tle_lines
 # ----------------------------------------------------------------------------------
 # My Location of interest
 # ----------------------------------------------------------------------------------
-JUJA = locations.Location("KALRO Mwea Kirogo farm", latitude_deg=-0.6507289449113348,
+JUJA = locations.Location("JUJA", latitude_deg=-0.6507289449113348,
                           longitude_deg=37.38098941349445, elevation_m=1150)
 # ----------------------------------------------------------------------------------
 
@@ -83,7 +83,7 @@ print("AFTER 5 EPOCHS END DATE", T2s2A.date())
 
 passes2 = []  #Create an empty list
 for j in x2:
-    sentinel2A = datetime.datetime(2023, 6, 27)
+    sentinel2A = datetime.datetime(2023, 5, 28)
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
     passes2.append(next_pass) # Stores the passes to the passes[] list
 
@@ -96,6 +96,6 @@ print("\n\n")
 print(len(passes2))
 print("Initial Pass = ", sentinel2A) # type: ignore
 print("Last Pass = ", passes2[5])
-landsat8 = passes2[5]
-print("Updated Initial Pass = ", sentinel2A)
+landsat8 = passes[5]
+print("Updated Initial Pass = ", landsat8)
 # ----------------------------------------------------------------------------------

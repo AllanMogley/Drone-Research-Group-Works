@@ -7,7 +7,7 @@ from orbit_predictor.sources import get_predictor_from_tle_lines
 # ----------------------------------------------------------------------------------
 # My Location of interest
 # ----------------------------------------------------------------------------------
-JUJA = locations.Location("KALRO Mwea Kirogo farm", latitude_deg=-0.6507289449113348,
+JUJA = locations.Location("JUJA", latitude_deg=-0.6507289449113348,
                           longitude_deg=37.38098941349445, elevation_m=1150)
 # ----------------------------------------------------------------------------------
 

@@ -96,6 +96,8 @@ print("\n\n")
 print(len(passes2))
 print("Initial Pass = ", sentinel2A) # type: ignore
 print("Last Pass = ", passes2[5])
-landsat8 = passes2[5]
+landsat8 = pas
+
+ses2[5]
 print("Updated Initial Pass = ", sentinel2A)
 # ----------------------------------------------------------------------------------
