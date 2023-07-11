@@ -3,16 +3,16 @@ from landsatxplore.api import API
 # from Logins import username, password
 
 
-# Read Username and Password from Loginss.txt
+# Read Password and 
 with open("Project SpaceTrack/APIs/Logins.txt") as file:
    lines = file.read()
    username = lines.split('\n')[0].lstrip()
    password = lines.split('\n')[1].lstrip()
 
+username1 = username
+password1 = password
 print(username)
 print(password)
-
-
 # Initialize a new API instance and get an access key
 api = API(username, password)
 

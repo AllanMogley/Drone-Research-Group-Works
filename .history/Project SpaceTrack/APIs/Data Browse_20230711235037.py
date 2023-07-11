@@ -11,8 +11,6 @@ with open("Project SpaceTrack/APIs/Logins.txt") as file:
 
 print(username)
 print(password)
-
-
 # Initialize a new API instance and get an access key
 api = API(username, password)
 

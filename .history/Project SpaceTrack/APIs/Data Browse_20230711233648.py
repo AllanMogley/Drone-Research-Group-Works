@@ -1,24 +1,14 @@
 import json
 from landsatxplore.api import API
-# from Logins import username, password
-
-
-# Read Username and Password from Loginss.txt
-with open("Project SpaceTrack/APIs/Logins.txt") as file:
-   lines = file.read()
-   username = lines.split('\n')[0].lstrip()
-   password = lines.split('\n')[1].lstrip()
-
-print(username)
-print(password)
-
+from Logins import username, password
 
 # Initialize a new API instance and get an access key
 api = API(username, password)
 
-
-
-
+with open("Project SpaceTrack/APIs/Logins.txt") as file:
+   lines = file.read()
+   
+   print(lines)
 
 
 # Search for Landsat TM scenes
