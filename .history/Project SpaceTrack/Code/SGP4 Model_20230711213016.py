@@ -74,27 +74,16 @@ print("Updated Initial Pass = ", landsat8)
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte2())*6, satelitte2())
-print("\n\n")
-print("SENTINEL 2A")
-print("TODAYS DATE", T.date())
-print("AFTER 5 EPOCHS END DATE", T2s2A.date())
+# x2 = range(0, (satelitte2())*6, satelitte2())
+# print("\n\n")
+# print("SENTINEL 2A")
+# print("TODAYS DATE", T.date())
+# print("AFTER 5 EPOCHS END DATE", T2s2A.date())
+# for j in x2:
+    # sentinel2A = datetime.datetime(2023, 5, 28)
+#     next_pass2 = sentinel2A + datetime.timedelta(days = j)
 
-
-passes2 = []  #Create an empty list
-for j in x2:
-    sentinel2A = datetime.datetime(2023, 5, 28)
-    next_pass2 = sentinel2A + datetime.timedelta(days = j)
-    passes2.append(next_pass) # Stores the passes to the passes[] list
-
-    if next_pass2 <= T2s2A:
-        print("Day", j, next_pass2.strftime('%A'))
-        print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
-
-
-print("\n\n")
-print(len(passes2))
-print("Initial Pass = ", sentinel2A) # type: ignore
-print("Last Pass = ", passes2[5])
-landsat8 = passes2[5]
-print("Updated Initial Pass = ", sentinel2A)
+#     if next_pass2 <= T2s2A:
+#         print("Day", j, next_pass2.strftime('%A'))
+#         print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
+# ----------------------------------------------------------------------------------

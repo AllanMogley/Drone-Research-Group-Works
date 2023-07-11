@@ -83,7 +83,7 @@ print("AFTER 5 EPOCHS END DATE", T2s2A.date())
 
 passes2 = []  #Create an empty list
 for j in x2:
-    sentinel2A = datetime.datetime(2023, 5, 28)
+    sentinel2A = datetime.datetime(2023, 6, 27)
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
     passes2.append(next_pass) # Stores the passes to the passes[] list
 
