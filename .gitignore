@@ -2,11 +2,11 @@
 Project SpaceTrack/APIs/Logins.txt
 
 # Extra Files
-.history
-.vscode
+.history/
+.vscode/
 
 # FrontEnd Folder
-/FrontEnd
+FrontEnd/
 
 
 
