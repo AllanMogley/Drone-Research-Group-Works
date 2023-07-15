@@ -41,3 +41,31 @@ for scene in scenes:
     #     json.dump(scene['spatial_coverage'].__geo_interface__, f)
 # print(passes)
 api.logout()
+
+
+# Parameters
+# ----------
+# dataset : str
+#     Case-insensitive dataset alias (e.g. landsat_tm_c1).
+# longitude : float, optional
+#     Longitude of the point of interest.
+# latitude : float, optional
+#     Latitude of the point of interest.
+# bbox : tuple, optional
+#     (xmin, ymin, xmax, ymax) of the bounding box.
+# max_cloud_cover : int, optional
+#     Max. cloud cover in percent (1-100).
+# start_date : str, optional
+#     YYYY-MM-DD
+# end_date : str, optional
+#     YYYY-MM-DD. Equal to start_date if not provided.
+# months : list of int, optional
+#     Limit results to specific months (1-12).
+# max_results : int, optional
+#     Max. number of results. Defaults to 100.
+
+# Returns
+# -------
+# scenes : list of dict
+#     Matching scenes as a list of dict containing metadata.
+# """
