@@ -21,8 +21,8 @@ scenes = api.search(
     dataset='landsat_ot_c2_l1',
     latitude=-1.1018,
     longitude=37.0144,
-    start_date='2023-06-20',
-    end_date='2023-12'
+    start_date='2023-05-20',
+    end_date='2023-12-31'
     # max_cloud_cover=90
 )
 
