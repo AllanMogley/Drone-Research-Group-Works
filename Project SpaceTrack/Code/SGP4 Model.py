@@ -2,7 +2,9 @@ import datetime
 import TLEs
 from orbit_predictor import locations
 from orbit_predictor.sources import get_predictor_from_tle_lines
+from APIs.DataBrowse import l_sat_dates
 
+l_sat_dates()
 
 # ----------------------------------------------------------------------------------
 # My Location of interest

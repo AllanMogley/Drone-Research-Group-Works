@@ -26,14 +26,18 @@ scenes = api.search(
     # max_cloud_cover=90
 )
 
-print(f"{len(scenes)} scenes found.")
 
-# Process the result
-passes = []  # Create an empty list
-for scene in scenes:
-    print(scene['acquisition_date'].strftime('%Y-%m-%d'))
-    # passes.append(scene)  Fill List with LS8/9 PassDates
+def l_sat_dates():
+    # Process the result
+    passes = []  # Create an empty list
+    print(f"{len(scenes)} scenes found.")
+    for scene in scenes:
+        dates = scene['acquisition_date'].strftime('%Y-%m-%d')
+        print(dates)
+        # passes.append(scene)  Fill List with LS8/9 PassDates
+    # return(len(scenes))
 
+l_sat_dates()
 
     # Export scene footprints to disk
     # fname = f"{scene['landsat_product_id']}.geojson"
