@@ -2,9 +2,8 @@ import datetime
 from Satellite_Orbital_Parameters import TLEs #type: ignore
 from orbit_predictor import locations
 from orbit_predictor.sources import get_predictor_from_tle_lines
-from APIs.DataBrowse import l_sat_dates
+from APIs.DataBrowse import *
 
-l_sat_dates()
 
 # ----------------------------------------------------------------------------------
 # My Location of interest
@@ -54,7 +53,7 @@ print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 
 passes = []  #Create an empty list
 for i in x:
-    landsat8 = datetime.datetime(2023, 6, 20)
+    landsat8 = datetime.datetime(myyear, mymonth, mydate)
     next_pass = landsat8 + datetime.timedelta(days = -i)
     passes.append(next_pass) # Stores the passes to the passes[] list
 

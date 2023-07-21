@@ -40,23 +40,28 @@ def l_sat_dates():
     last_Pass2 = myList = last_Pass[0].split('-')
     # print(type(last_Pass[:1]))
 
-    global year
+    global year # Make year variblae accessible globally
     year = last_Pass2[0]
+    # print(year)
 
-    global month
-    month = last_Pass2[1]
-    print(month)
-    res = [ele.lstrip('0') for ele in month]
-    print(res)
+    montha = last_Pass2[1]
+    monthb = [ele.lstrip('0') for ele in montha[1]] # Strip zero value
+    global month # Make month variblae accessible globally
+    month = monthb[0]
+    # print(month)
 
-    print(year+ ", " + month)
-    return (year)
+    global date # Make year variblae accessible globally
+    date = last_Pass2[2]
+    # print(date)
+
+
 
 l_sat_dates()
 myyear = int(year)
-# sentinel2A = datetime.datetime(2023, 5, 28)
-sentinel2A = datetime.datetime(myyear, 5, 28) # type: ignore
-print (type(sentinel2A))
+mymonth =int(month)
+mydate = int(date)
+lsat = datetime.datetime(myyear, mymonth, mydate) # type: ignore
+print (lsat)
 
 
 
