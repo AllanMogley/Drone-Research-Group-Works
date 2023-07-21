@@ -55,7 +55,7 @@ passes = []  #Create an empty list
 for i in x:
     landsat8 = datetime.datetime(myyear, mymonth, mydate)
     print(landsat8)
-    next_pass = landsat8 + datetime.timedelta(days = 0)
+    next_pass = landsat8 + datetime.timedelta( days= -i)
     passes.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass <= T2ls8:
