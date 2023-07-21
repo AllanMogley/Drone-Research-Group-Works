@@ -1,9 +1,10 @@
 import json
 from landsatxplore.api import API
+import datetime
 
 
 # Read Username and Password from Loginss.txt
-with open("Project SpaceTrack/APIs/Logins.txt") as file:
+with open("Project SpaceTrack/Code/APIs/Logins.txt") as file:
    lines = file.read()
    username = lines.split('\n')[0].lstrip()
    password = lines.split('\n')[1].lstrip()
@@ -27,17 +28,28 @@ scenes = api.search(
 )
 
 
+
+from functools import reduce
 def l_sat_dates():
     # Process the result
     passes = []  # Create an empty list
     print(f"{len(scenes)} scenes found.")
     for scene in scenes:
         dates = scene['acquisition_date'].strftime('%Y-%m-%d')
-        print(dates)
-        # passes.append(scene)  Fill List with LS8/9 PassDates
-    # return(len(scenes))
+        # print(dates)
+        passes.append(dates)  
+    last_Pass = passes[:1]
+    print(type(last_Pass))
+    print(last_Pass)
+    return last_Pass
 
 l_sat_dates()
+# sentinel2A = datetime.datetime(2023, 5, 28)
+# sentinel2A = datetime.datetime(l_sat_dates()) # type: ignore
+# print (type(sentinel2A))
+
+
+
 
     # Export scene footprints to disk
     # fname = f"{scene['landsat_product_id']}.geojson"

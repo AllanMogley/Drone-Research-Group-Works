@@ -1,5 +1,5 @@
 import datetime
-import TLEs
+from Satellite_Orbital_Parameters import TLEs #type: ignore
 from orbit_predictor import locations
 from orbit_predictor.sources import get_predictor_from_tle_lines
 from APIs.DataBrowse import l_sat_dates
