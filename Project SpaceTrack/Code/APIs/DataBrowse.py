@@ -28,8 +28,6 @@ scenes = api.search(
 )
 
 
-
-from functools import reduce
 def l_sat_dates():
     # Process the result
     passes = []  # Create an empty list
@@ -39,15 +37,26 @@ def l_sat_dates():
         # print(dates)
         passes.append(dates)  
     last_Pass = passes[:1]
-    print(type(last_Pass))
-    print(last_Pass)
-    return last_Pass
+    last_Pass2 = myList = last_Pass[0].split('-')
+    # print(type(last_Pass[:1]))
+
+    global year
+    year = last_Pass2[0]
+
+    global month
+    month = last_Pass2[1]
+    print(month)
+    res = [ele.lstrip('0') for ele in month]
+    print(res)
+
+    print(year+ ", " + month)
+    return (year)
 
 l_sat_dates()
+myyear = int(year)
 # sentinel2A = datetime.datetime(2023, 5, 28)
-# sentinel2A = datetime.datetime(l_sat_dates()) # type: ignore
-# print (type(sentinel2A))
-
+sentinel2A = datetime.datetime(myyear, 5, 28) # type: ignore
+print (type(sentinel2A))
 
 
 
