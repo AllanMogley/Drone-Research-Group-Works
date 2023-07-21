@@ -21,8 +21,8 @@ predictor2 = get_predictor_from_tle_lines(TLEs.S2A)
 predictor = get_predictor_from_tle_lines(TLEs.LS8)
 def satelitte():
     if predictor.sate_id == 39084:
-        # print("LANDSAT 8")
-        n = 16
+        # print("LANDSAT 8 & 7")
+        n = 8
         return n
 
 def satelitte2():
@@ -54,7 +54,8 @@ print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 passes = []  #Create an empty list
 for i in x:
     landsat8 = datetime.datetime(myyear, mymonth, mydate)
-    next_pass = landsat8 + datetime.timedelta(days = -i)
+    print(landsat8)
+    next_pass = landsat8 + datetime.timedelta(days = 0)
     passes.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass <= T2ls8:

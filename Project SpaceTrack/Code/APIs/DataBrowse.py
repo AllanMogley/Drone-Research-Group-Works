@@ -4,7 +4,7 @@ import datetime
 
 
 # Read Username and Password from Loginss.txt
-with open("Project SpaceTrack/Code/APIs/Logins.txt") as file:
+with open("Project SpaceTrack/Code/APIs/Logins.txt") as file: # type: ignore
    lines = file.read()
    username = lines.split('\n')[0].lstrip()
    password = lines.split('\n')[1].lstrip()
@@ -60,6 +60,7 @@ l_sat_dates()
 myyear = int(year)
 mymonth =int(month)
 mydate = int(date)
+
 lsat = datetime.datetime(myyear, mymonth, mydate) # type: ignore
 print (lsat)
 
