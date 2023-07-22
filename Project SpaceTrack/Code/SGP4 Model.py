@@ -36,8 +36,8 @@ def satelitte2():
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*15 )
-T2s2A = T + datetime.timedelta(days = satelitte2()*15 )
+T2ls8 = T + datetime.timedelta(days = satelitte()*15 ) # type: ignore
+T2s2A = T + datetime.timedelta(days = satelitte2()*15 ) # type: ignore
 # ----------------------------------------------------------------------------------
 
 
@@ -45,7 +45,7 @@ T2s2A = T + datetime.timedelta(days = satelitte2()*15 )
 # ----------------------------------------------------------------------------------
 # Predict LANDSAT8 Next Pass
 # ----------------------------------------------------------------------------------
-x = range(0, (satelitte())*11, satelitte())
+x = range(0, (satelitte())*11, satelitte()) # type: ignore
 print("\n\n")
 print("LANDSAT 8")
 print("TODAYS DATE", T.date())
@@ -76,7 +76,7 @@ print("Updated Initial Pass = ", landsat8)
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte2())*11, satelitte2())
+x2 = range(0, (satelitte2())*11, satelitte2()) # type: ignore
 print("\n\n")
 print("SENTINEL 2A")
 print("TODAYS DATE", T.date())
@@ -87,16 +87,9 @@ passes2 = []  #Create an empty list
 for j in x2:
     sentinel2A = datetime.datetime(2023, 7, 17)
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
-    passes2.append(next_pass) # Stores the passes to the passes[] list
+    passes2.append(next_pass) # type: ignore
 
     if next_pass2 <= T2s2A:
         print("Day", j, next_pass2.strftime('%A, %b %d'))
         # print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
 
-
-print("\n\n")
-print(len(passes2))
-print("Initial Pass = ", sentinel2A) # type: ignore
-print("Last Pass = ", passes2[5])
-landsat8 = passes2[5]
-print("Updated Initial Pass = ", sentinel2A)
