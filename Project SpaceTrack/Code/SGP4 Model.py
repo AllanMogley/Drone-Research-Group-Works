@@ -36,8 +36,8 @@ def satelitte2():
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*6 )
-T2s2A = T + datetime.timedelta(days = satelitte2()*6 )
+T2ls8 = T + datetime.timedelta(days = satelitte()*15 )
+T2s2A = T + datetime.timedelta(days = satelitte2()*15 )
 # ----------------------------------------------------------------------------------
 
 
@@ -45,7 +45,7 @@ T2s2A = T + datetime.timedelta(days = satelitte2()*6 )
 # ----------------------------------------------------------------------------------
 # Predict LANDSAT8 Next Pass
 # ----------------------------------------------------------------------------------
-x = range(0, (satelitte())*6, satelitte())
+x = range(0, (satelitte())*11, satelitte())
 print("\n\n")
 print("LANDSAT 8")
 print("TODAYS DATE", T.date())
@@ -54,13 +54,13 @@ print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 passes = []  #Create an empty list
 for i in x:
     landsat8 = datetime.datetime(myyear, mymonth, mydate)
-    print(landsat8)
+    # print(landsat8)
     next_pass = landsat8 + datetime.timedelta( days= -i)
     passes.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass <= T2ls8:
-        print("Day", i, next_pass.strftime('%A'))
-        print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
+        print("Day", i, next_pass.strftime('%A, %b %d'))
+        # print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
 
 print("\n\n")
@@ -76,7 +76,7 @@ print("Updated Initial Pass = ", landsat8)
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte2())*6, satelitte2())
+x2 = range(0, (satelitte2())*11, satelitte2())
 print("\n\n")
 print("SENTINEL 2A")
 print("TODAYS DATE", T.date())
@@ -85,13 +85,13 @@ print("AFTER 5 EPOCHS END DATE", T2s2A.date())
 
 passes2 = []  #Create an empty list
 for j in x2:
-    sentinel2A = datetime.datetime(2023, 5, 28)
+    sentinel2A = datetime.datetime(2023, 7, 17)
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
     passes2.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass2 <= T2s2A:
-        print("Day", j, next_pass2.strftime('%A'))
-        print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
+        print("Day", j, next_pass2.strftime('%A, %b %d'))
+        # print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
 
 
 print("\n\n")
