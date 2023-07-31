@@ -1,0 +1,7 @@
+{
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "c:\\Program Files\\ArcGIS\\Pro\\bin\\Python\\envs\\arcgispro-py3 - Clone\\python.exe",
+        "./Project SpaceTrack/APIs"
+    ]
+}

@@ -1,0 +1,14 @@
+#Ignore Password File
+Project SpaceTrack/Code/APIs/Logins.txt
+
+# Extra Files
+.history/
+.vscode/
+
+# FrontEnd Folder
+FrontEnd/
+
+
+
+
+

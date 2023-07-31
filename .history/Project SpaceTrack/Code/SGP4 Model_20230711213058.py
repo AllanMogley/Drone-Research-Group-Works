@@ -1,8 +1,7 @@
 import datetime
-from Satellite_Orbital_Parameters import TLEs #type: ignore
+import TLEs
 from orbit_predictor import locations
 from orbit_predictor.sources import get_predictor_from_tle_lines
-from APIs.DataBrowse import *
 
 
 # ----------------------------------------------------------------------------------
@@ -19,11 +18,10 @@ JUJA = locations.Location("JUJA", latitude_deg=-1.1018, longitude_deg=37.0144,
 # ----------------------------------------------------------------------------------
 predictor2 = get_predictor_from_tle_lines(TLEs.S2A)
 predictor = get_predictor_from_tle_lines(TLEs.LS8)
-
 def satelitte():
     if predictor.sate_id == 39084:
         # print("LANDSAT 8")
-        n = 8
+        n = 16
         return n
 
 def satelitte2():
@@ -37,8 +35,8 @@ def satelitte2():
 # Define Update Date Range
 # ----------------------------------------------------------------------------------
 T = datetime.datetime.today()
-T2ls8 = T + datetime.timedelta(days = satelitte()*15 ) # type: ignore
-T2s2A = T + datetime.timedelta(days = satelitte2()*15 ) # type: ignore
+T2ls8 = T + datetime.timedelta(days = satelitte()*6 )
+T2s2A = T + datetime.timedelta(days = satelitte2()*6 )
 # ----------------------------------------------------------------------------------
 
 
@@ -46,21 +44,29 @@ T2s2A = T + datetime.timedelta(days = satelitte2()*15 ) # type: ignore
 # ----------------------------------------------------------------------------------
 # Predict LANDSAT8 Next Pass
 # ----------------------------------------------------------------------------------
-x = range(0, (satelitte())*11, satelitte()) # type: ignore
+x = range(0, (satelitte())*6, satelitte())
 print("\n\n")
 print("LANDSAT 8")
 print("TODAYS DATE", T.date())
-print("AFTER 15 EPOCHS END DATE", T2ls8.date())
+print("AFTER 5 EPOCHS END DATE", T2ls8.date())
 
 passes = []  #Create an empty list
 for i in x:
-    landsat8 = datetime.datetime(myyear, mymonth, mydate)
-    next_pass = landsat8 + datetime.timedelta( days= -i)
-    passes.append(next_pass) # Stores the passes to the list
+    landsat8 = datetime.datetime(2023, 6, 20)
+    next_pass = landsat8 + datetime.timedelta(days = i)
+    passes.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass <= T2ls8:
-        print("Day", i, next_pass.strftime('%A, %b %d'))
+        print("Day", i, next_pass.strftime('%A'))
+        print(predictor.get_next_pass(JUJA, next_pass, max_elevation_gt=30))
 
+
+print("\n\n")
+print(len(passes))
+print("Initial Pass = ", landsat8) # type: ignore
+print("Last Pass = ", passes[5])
+landsat8 = passes[5]
+print("Updated Initial Pass = ", landsat8)
 # ----------------------------------------------------------------------------------
 
 
@@ -68,19 +74,27 @@ for i in x:
 # ----------------------------------------------------------------------------------
 # Predict SENTINEL2A Next Pass
 # ----------------------------------------------------------------------------------
-x2 = range(0, (satelitte2())*11, satelitte2()) # type: ignore
+x2 = range(0, (satelitte2())*6, satelitte2())
 print("\n\n")
 print("SENTINEL 2A")
 print("TODAYS DATE", T.date())
-print("AFTER 11 EPOCHS END DATE", T2s2A.date())
+print("AFTER 5 EPOCHS END DATE", T2s2A.date())
 
 
 passes2 = []  #Create an empty list
 for j in x2:
-    sentinel2A = datetime.datetime(2023, 7, 27)
+    sentinel2A = datetime.datetime(2023, 5, 28)
     next_pass2 = sentinel2A + datetime.timedelta(days = j)
-    passes2.append(next_pass) # type: ignore
+    passes2.append(next_pass) # Stores the passes to the passes[] list
 
     if next_pass2 <= T2s2A:
-        print("Day", j, next_pass2.strftime('%A, %b %d'))
+        print("Day", j, next_pass2.strftime('%A'))
+        print(predictor.get_next_pass(JUJA, next_pass2, max_elevation_gt=30))
 
+
+print("\n\n")
+print(len(passes2))
+print("Initial Pass = ", sentinel2A) # type: ignore
+print("Last Pass = ", passes2[5])
+landsat8 = passes2[5]
+print("Updated Initial Pass = ", sentinel2A)
