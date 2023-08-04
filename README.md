@@ -1,3 +1,5 @@
+![DRG stats](https://github-readme-stats.vercel.app/api?username=AllanMogley&theme=dark&show_icons=true)
+
 # Drone-Research-Group-Works
 A Repository for Drone Research Group Operations and Processes
 
